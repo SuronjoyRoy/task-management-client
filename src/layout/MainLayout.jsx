@@ -1,8 +1,15 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import Navbar from "../shared/Navbar/Navbar";
+import Footer from "../shared/Footer/Footer";
 
-export const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <div>Hello world!</div>,
-    },
-  ]);
+const MainLayout = () => {
+    return (
+        <div>
+            <Navbar></Navbar>
+            <Outlet></Outlet>
+            <Footer></Footer>
+        </div>
+    );
+};
+
+export default MainLayout;
