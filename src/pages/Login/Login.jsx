@@ -4,6 +4,7 @@ import loginImg from '../../assets/login/Frame.png';
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import Swal from "sweetalert2";
+import GoogLogin from "../../components/SocialLogin/GooglLogin";
 // import SocialLogin from "../../components/SocailLogin/SocailLogin";
 
 const Login = () => {
@@ -70,7 +71,7 @@ const Login = () => {
                             </div>
                             <div className="text-center">
                                 <p className='px-6 text-center mb-5 text-lg'><small>New Here? <Link className="text-blue-600 font-bold" to="/signup">Create an account</Link> </small></p>
-                                {/* <SocialLogin></SocialLogin> */}
+                                <GoogLogin></GoogLogin>
                             </div>
                         </form>
 

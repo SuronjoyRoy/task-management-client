@@ -5,6 +5,9 @@ import About from "../pages/About/About";
 import Contact from "../pages/Contact/Contact";
 import Login from "../pages/Login/Login";
 import SignUp from "../pages/SignUp/SignUp";
+import Dashboard from "../layout/Dashboard/Dashboard";
+import UserProfile from "../layout/Dashboard/UserProfile/UserProfile";
+import PrivateRoute from "./PrivateRoutes";
 
 export const router = createBrowserRouter([
     {
@@ -33,4 +36,14 @@ export const router = createBrowserRouter([
         },
       ]
     },
+    {
+        path:'dashboard',
+        element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+        children:[
+            {
+                path:'userprofile',
+                element:<UserProfile></UserProfile>
+              },
+        ]
+    }
   ]);
