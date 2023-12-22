@@ -22,38 +22,38 @@ const SignUp = () => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
                 updateUserProfile(data.name, data.photoURL)
-                .then(() => {
-                    // create user entry in the database
-                    const userInfo = {
-                        name: data.name,
-                        email: data.email,
-                        photoURL: data.photoURL,
-                        role:'user',
-                    }
-                    axiosPublic.post('/users', userInfo)
-                        .then(res => {
-                            if (res.data.insertedId) {
-                                console.log('user added to the database')
-                                reset();
-                                Swal.fire({
-                                    position: 'top-end',
-                                    icon: 'success',
-                                    title: 'User created successfully.',
-                                    showConfirmButton: false,
-                                    timer: 1500
-                                });
-                                navigate('/');
-                            }
-                        })
+                    .then(() => {
+                        // create user entry in the database
+                        const userInfo = {
+                            name: data.name,
+                            email: data.email,
+                            photoURL: data.photoURL,
+                            role: 'user',
+                        }
+                        axiosPublic.post('/users', userInfo)
+                            .then(res => {
+                                if (res.data.insertedId) {
+                                    console.log('user added to the database')
+                                    reset();
+                                    Swal.fire({
+                                        position: 'top-end',
+                                        icon: 'success',
+                                        title: 'User created successfully.',
+                                        showConfirmButton: false,
+                                        timer: 1500
+                                    });
+                                    navigate('/');
+                                }
+                            })
 
 
-                })
-                .catch(error => console.log(error)) 
-                   
-            })           
+                    })
+                    .catch(error => console.log(error))
 
+            })
     };
 
+    
     return (
         <>
             <Helmet>
@@ -126,5 +126,5 @@ const SignUp = () => {
     );
 };
 
-export default SignUp;
+ export default SignUp;
 

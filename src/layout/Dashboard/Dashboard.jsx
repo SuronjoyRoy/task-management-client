@@ -16,69 +16,24 @@ const Dashboard = () => {
                     
                     
                     <li>
-                        <NavLink className='btn btn-block' to="/dashboard/users">
+                        <NavLink className='btn btn-block' to="/dashboard/addtask">
                             <FaUsers></FaUsers>
                             Ad Task</NavLink>
                     </li>
                     <li>
-                        <NavLink className='btn btn-block' to="/dashboard/allClasses">
+                        <NavLink className='btn btn-block' to="/dashboard/alltask">
                             <FaBook></FaBook>
                             All Task</NavLink>
                     </li>
                     <li>
-                        <NavLink className='btn btn-block' to="/dashboard/userprofile">
+                        <NavLink className='btn btn-block' to="/dashboard/todo">
                             <FaUsers></FaUsers>
-                            Profile</NavLink>
+                            Todo</NavLink>
                     </li>
 
                 </ul>
                 </>
              
-
-                {/* teacher dashboard */}
-
-                {/* {rolChecker === 'teacher' && (
-                    <>
-                    <ul className="user p-4 space-y-2">
-                            <li>
-                                <NavLink className='btn btn-block' to="/dashboard/addclass">
-                                    <FaBook></FaBook>
-                                    Add class
-                                </NavLink>
-                            </li>
-
-                            <li>
-                                <NavLink className='btn btn-block' to="/dashboard/myclass">
-                                    <FaBook></FaBook>
-                                    My Class
-                                </NavLink>
-                            </li>
-                            <li>
-                                <NavLink className='btn btn-block' to="/dashboard/userProfile">
-                                    <FaUsers></FaUsers>
-                                    Profile</NavLink>
-                            </li>
-                            </ul>
-                    </>
-                )} */}
-                {/* users dashboard */}
-                {/* {rolChecker === 'user' && (
-                    <>
-                        <ul className="user p-4 space-y-2">
-                        <li>
-                            <NavLink className='btn btn-block' to="/dashboard/myEnrollclass">
-                                <FaBook></FaBook>
-                                My enroll class
-                            </NavLink>
-                        </li>
-                        <li>
-                            <NavLink className='btn btn-block' to="/dashboard/userProfile">
-                                <FaUsers></FaUsers>
-                                Profile</NavLink>
-                        </li>
-                        </ul>
-                    </>
-                )} */}
 
                 {/* shared nav links */}
                 <div className="divider"></div>

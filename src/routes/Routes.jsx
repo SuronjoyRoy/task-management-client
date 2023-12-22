@@ -8,6 +8,9 @@ import SignUp from "../pages/SignUp/SignUp";
 import Dashboard from "../layout/Dashboard/Dashboard";
 import UserProfile from "../layout/Dashboard/UserProfile/UserProfile";
 import PrivateRoute from "./PrivateRoutes";
+import AddTask from "../layout/Dashboard/AddTask/AddTask";
+import AllTask from "../layout/Dashboard/AllTask/AllTask";
+import Todo from "../layout/Dashboard/Todo/Todo";
 
 export const router = createBrowserRouter([
     {
@@ -40,9 +43,18 @@ export const router = createBrowserRouter([
         path:'dashboard',
         element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
         children:[
+            
             {
-                path:'userprofile',
-                element:<UserProfile></UserProfile>
+                path:'addtask',
+                element:<AddTask></AddTask>
+              },
+            {
+                path:'alltask',
+                element:<AllTask></AllTask>
+              },
+            {
+                path:'todo',
+                element:<Todo></Todo>
               },
         ]
     }
